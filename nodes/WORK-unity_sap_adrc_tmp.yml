@@ -83,7 +83,7 @@ steps:
               - locationName: SAMPLE
                 nodeName: ADRC
             join:
-              joinCondition: FROM {{ ref('SAMPLE', 'ADRC') }} ADRC WHERE ADRC.slt_delete = ' ' AND ADRC.nation = ' ' AND ADRC.date_to = '99991231'
+              joinCondition: from {{ ref('SAMPLE', 'ADRC') }} where slt_delete = ' ' and nation = ' ' and date_to = '99991231'
             name: unity_sap_adrc_tmp
             noLinkRefs: []
       name: unity_sap_adrc_tmp
